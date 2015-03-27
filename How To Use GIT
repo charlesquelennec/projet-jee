@@ -1,0 +1,21 @@
+Faire une copie du projet  créer sur git hub
+
+- git clone https://github.com/charlesquelennec/projet-jee.git
+
+Commande pour ajouter un nouveau fichier
+- git add indiquez ici le nom du projet à ajouter 
+ex: git add parking
+
+Faire un commit après modifications 
+- git commit -a -m " le commentaire détaillant la nouvelle version"
+
+Ajouter la nouvelle version vers le serveur
+- git push
+
+Supprimer un dossier ou un fichier
+- git rm "nom du fichier"
+ex: git rm parking
+    git commit parking 
+    git push
+    --> entrer nom
+    --> entrer pwd
