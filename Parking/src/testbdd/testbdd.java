@@ -5,6 +5,8 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
 
+import modelbean.Parkingbean;
+
 public class testbdd {
 	private static String DBURL = "jdbc:mysql://localhost:8889/parking";
 	private static String DBLOGIN = "root";
@@ -33,7 +35,9 @@ public class testbdd {
 			System.out.println("Objet requête créée");
 			
 			 /* Exécution d'une requête de lecture */
-			rset = stmt.executeQuery("SELECT * FROM parking");
+			Parkingbean parking =new Parkingbean();
+			rset = stmt.executeQuery("INSERT INTO parking (id,NOM,ADRESSE,PRIX) values (12,drake,AREF,34)");
+			/*rset = stmt.executeQuery("SELECT * FROM parking");
 			
 		    /* Récupération des données du résultat de la requête de lecture */
 			while (rset.next()) {

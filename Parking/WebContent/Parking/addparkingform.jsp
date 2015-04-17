@@ -4,7 +4,7 @@
 <BODY BGCOLOR="#FDF5E6">
 <H1 ALIGN="CENTER">Ajout</H1>
 
-<FORM method="post" ACTION="../Parking/parkingservlet">
+<FORM  ACTION="../parkingservlet">
   Nom de l'annonce:  <INPUT TYPE="TEXT" NAME="nom"><BR>
   Adresse: <INPUT TYPE="TEXT" NAME="adresse"><BR>
   Prix:  <INPUT TYPE="TEXT" NAME="prix"><BR>
