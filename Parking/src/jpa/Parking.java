@@ -31,6 +31,9 @@ public class Parking {
    public Parking() {
    }
 
+public Integer getId() {
+	return id;
+}
 
 public String getNom() {
 	return nom;

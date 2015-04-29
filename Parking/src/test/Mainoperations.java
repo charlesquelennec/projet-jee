@@ -1,6 +1,12 @@
 
 package test;
 import org.hibernate.Session;
+import org.hibernate.Query;
+import org.hibernate.Session;
+import java.util.ArrayList;
+import org.hibernate.Transaction;
+import jpa.Parking;
+
 
 public class Mainoperations {private static Session s = null;
 
@@ -9,10 +15,8 @@ public static void main(String[] args) {
       s = HibernateUtils.getSession();
 
       // Lancement des tests successifs
-      testCreate();
-      testRead();
-      testUpdate();
-      testDelete();
+      clean();
+
 
       // Fermeture de la session Hibernate
       s.close();
@@ -36,10 +40,19 @@ private static void testDelete() {
 
 // Vide la table Parking de toutes ses entrées
 private static void clean() {
+    System.out.println("--------- Vide la table events : ---------");
+    // Début de la transaction
+    Transaction tx = s.beginTransaction();
+
+    // Création de la requête
+    Query q = s.createQuery("delete Parking");
+    // Exécution de la requête
+    q.executeUpdate();
+
+    // Fin de la transaction
+    tx.commit();
 }
 
-// Affiche le contenu de la table Parking
-private static void print() {
-}
+
 
 }
