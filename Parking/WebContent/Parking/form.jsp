@@ -80,32 +80,46 @@
 				}
 		});
 	});
+	$(function(){
+		$("#prix").keyup(function(){ 
+				if(!$("#prix").val().match(/^[0-9]+$/)){
+					$("#prix").next(".error-message").show().text("Veuillez entrer un nombre");
+				}
+				else{
+					$("#prix").next(".error-message").hide().text("");
+					$("#prix").css("border-color","green");
+				}
+		});
+	});
 
-</script>	
+</script>
+<style type="text/css"><%@ include file="test.css" %></style>	
 	</HEAD>
 
 	
-	<BODY BGCOLOR="silver" >
-
-	<h1 ALIGN="CENTER">Ajout</h1>
+	<BODY>
+	<div id="container">
+	<h1 ALIGN="CENTER">Formulaire Type</h1>
 	
 	<FORM  ACTION="../parkingservlet">
 	
-	  Nom de l'annonce:  <INPUT TYPE="TEXT" id="nom" NAME="nom" size="30">
-	  <span class="error-message">erreur</span><br>
-	  Adresse: <INPUT TYPE="TEXT" id="adresse" NAME="adresse" size="30">
-	  <span class="error-message">erreur</span><br>
-	  Mot de passe: <INPUT TYPE="TEXT" id="mdp" NAME="mdp" size="30">
-	  <span class="error-message">erreur</span><br>
-	  Prix:  <INPUT TYPE="TEXT" NAME="prix"><BR>
+	  Nom de l'annonce:  <br><INPUT TYPE="TEXT" id="nom" NAME="nom" size="30">
+	  <span class="error-message">erreur</span><br><br>
+	  Adresse: <br><INPUT TYPE="TEXT" id="adresse" NAME="adresse" size="30">
+	  <span class="error-message">erreur</span><br><br>
+	  Mot de passe: <br><INPUT TYPE="TEXT" id="mdp" NAME="mdp" size="30">
+	  <span class="error-message">erreur</span><br><br>
+	  Prix:  <br><INPUT TYPE="TEXT" id="prix" NAME="prix" >
+	  <span class="error-message">erreur</span><br><br>
 	  Price:  
 	  <INPUT TYPE="checkbox" NAME="price1" value ="no">Prix1
-	  <INPUT TYPE="checkbox" NAME="price2" value ="yes">Prix2<BR>
+	  <INPUT TYPE="checkbox" NAME="price2" value ="yes">Prix2<BR><br>
 	  <INPUT TYPE="SUBMIT" value="envoyer" id="envoyer">
 	  
 	</FORM>
 	<script >
 
 	</script>
+	</div>
 	</BODY>
 </HTML>
