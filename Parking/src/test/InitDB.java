@@ -15,9 +15,10 @@ public class InitDB {
  
         // Création d'un objet Event
         Parking e = new Parking();
-        e.setNom("Titre de l'event 1");
+        e.setNom("Test");
         e.setAdresse("Description de l'évènement 1");
         e.setPrix(12);
+        
         
  
         // Enregistrement de l'event

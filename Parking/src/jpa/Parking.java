@@ -27,14 +27,22 @@ public class Parking {
    @Column(name="prix")
    private Integer prix;
    
- // Getters et setters
-   public Parking() {
-   }
+   @Column(name="superficie")
+   private Integer superficie;
+   
+   @Column(name="hauteur")
+   private Integer hauteur;
+   
+   @Column(name="Emplacement")
+   private Integer emplacement;
+   
 
-public Integer getId() {
-	return id;
-}
 
+
+@Column(name="Passe")
+   private Boolean passe;
+
+// Getters et setters
 public String getNom() {
 	return nom;
 }
@@ -43,6 +51,47 @@ public String getNom() {
 public void setNom(String nom) {
 	this.nom = nom;
 }
+ 
+   public Integer getHauteur() {
+	return hauteur;
+}
+   
+public void setHauteur(Integer hauteur) {
+	this.hauteur = hauteur;
+}
+
+public String getDescription() {
+	return description;
+}
+
+public void setDescription(String description) {
+	this.description = description;
+}
+
+
+@Column(name="description")
+   private String description;
+   
+ public Integer getSuperficie() {
+	return superficie;
+}
+
+public void setSuperficie(Integer superficie) {
+	this.superficie = superficie;
+}
+
+public void setId(Integer id) {
+	this.id = id;
+}
+
+   public Parking() {
+   }
+
+public Integer getId() {
+	return id;
+}
+
+
 
 
 public String getAdresse() {
@@ -62,6 +111,24 @@ public Integer getPrix() {
 
 public void setPrix(Integer prix) {
 	this.prix = prix;
+}
+public Integer getEmplacement() {
+	return emplacement;
+}
+
+
+public void setEmplacement(Integer emplacement) {
+	this.emplacement = emplacement;
+}
+
+
+public Boolean getPasse() {
+	return passe;
+}
+
+
+public void setPasse(Boolean passe) {
+	this.passe = passe;
 }
  
    

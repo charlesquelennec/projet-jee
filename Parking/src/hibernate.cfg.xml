@@ -18,7 +18,8 @@
 
         <!-- Fichiers à mapper -->
         <mapping class="jpa.Parking" />
-
+		<mapping class="jpa.Utilisateur" />
+		
         <!-- Affiche les logs SQL -->
 <!--        <property name="show_sql">true</property>-->
 <!--        <property name="hibernate.format_sql">true</property>-->
