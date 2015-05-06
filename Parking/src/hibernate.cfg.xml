@@ -9,9 +9,9 @@
         <!--  Paramètres de connexion à la base de données -->
         <property name="hibernate.dialect">org.hibernate.dialect.MySQLDialect</property>
         <property name="hibernate.connection.driver_class">com.mysql.jdbc.Driver</property>
-        <property name="hibernate.connection.url">jdbc:mysql://localhost:8889/parking</property>
+        <property name="hibernate.connection.url">jdbc:mysql://localhost/parking</property>
         <property name="hibernate.connection.username">root</property>
-        <property name="hibernate.connection.password">root</property>
+        <property name="hibernate.connection.password"></property>
 
         <!-- Comportement pour la conservation des tables -->
         <property name="hbm2ddl.auto">create</property>
